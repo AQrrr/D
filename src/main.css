@@ -1,32 +1,27 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box
-}
-
-*::before,
-*::after {
-    box-sizing: border-box
+    box-sizing: border-box; 
 }
 
 body {
-    background: #b11635;
+    background:#ff8e71;
     overflow: hidden;
 }
 
 #code {
     width: 100vw;
-    background: #b11635;
+    background: #ff8e71;
     height: 40vh;
     color: #fff;
     padding: 10px;  
-    font-family: cursive;
+    font-family: Arial, Helvetica, sans-serif;
     overflow-y: auto;
     margin-bottom: 10px;
 }
 
 .D-wrapper {
-    width: 269px;
+    width: 270px;
     height: 315px;
     position: relative;
     left: 50%;
@@ -39,17 +34,19 @@ body {
 
 
 .D-wrapper *,
-.D-wrapper *::before,
-.D-wrapper *::after {
+.D-wrapper ::before,
+.D-wrapper ::after {
     position: absolute;
 }
 
-.D-wrapper *::before,
-.D-wrapper *::after {
+.D-wrapper ::before,
+.D-wrapper ::after {
     content: "";
+    box-sizing: border-box
 }
 
-.D-wrapper *.center {
+
+.D-wrapper .center {
     left: 50%;
     transform: translateX(-50%);
 }
@@ -57,12 +54,12 @@ body {
 #Doraemon {
     width: 100vw;
     height: 60vh;
-    background: rgb(212, 236, 249);
+    background: rgb(205, 235, 252);
 }
 
 @keyframes move {
     from {
-        transform: translateY(100px)
+        transform: translateY(90px)
     }
 
     to {
@@ -71,7 +68,7 @@ body {
 }
 
 @keyframes fly {
-    /*2*/
+    /*竹蜻蜓*/
     from {
         transform: rotate3D(0, 1, 0, 0deg);
     }

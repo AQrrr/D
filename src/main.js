@@ -1,4 +1,4 @@
-let text = `/* 画一只机器猫~ */
+let text = `/* 画一只哆啦A梦~ */
 
 /* 开始了~*/
 .D-fly {
@@ -218,7 +218,7 @@ let text = `/* 画一只机器猫~ */
 }
 
 /* 大肚子~ */
-.D-tripe {
+.D-belly {
     width: 130px;
     height: 120px;
     background: rgb(53, 161, 201);
@@ -227,7 +227,7 @@ let text = `/* 画一只机器猫~ */
     top: 160px;
 }
 
-.D-tripe::before {
+.D-belly::before {
     width: 80px;
     height: 50px;
     background: #fff;
@@ -237,7 +237,7 @@ let text = `/* 画一只机器猫~ */
     transform: translateX(-50%)
 }
 
-.D-tripe::after {
+.D-belly::after {
     width: 56px;
     height: 28px;
     border: 2px solid #000;
@@ -303,7 +303,7 @@ let text = `/* 画一只机器猫~ */
     left: 50%;
 }
 
-/* 来，动起来~ */
+/* 竹蜻蜓~ */
 .D-move.center {
     width: 80px;
     height: 4px;
@@ -313,13 +313,12 @@ let text = `/* 画一只机器猫~ */
     animation: fly .1s infinite;
 }
 
-/* 最后上个天~ */ 
+/* 飞起来~ */ 
 .D-wrapper {
     animation: move .6s ease infinite alternate-reverse;
 }
 
-/* 好了就到这了~ */
-/* 谢谢观看~ */
+/* 结束~ */
 
 `
 
@@ -327,7 +326,6 @@ let duration = 40,
     timer = null,
     rest = "",
     pre = '',
-    app = null;
 btnControl = null;
 
 btnControl = BtnControl();
@@ -369,10 +367,7 @@ btn.onclick = (e) => {
             styleTag.innerHTML = text;
             code.scrollTop = code.scrollHeight;
             break;
-        case messageBtn:
-            messageWrapper.style.display = "block";
-            myScreen.style.display = "block";
-            break;
+        
     }
 }
 
@@ -382,7 +377,7 @@ function BtnControl() {
     let btnModeDom = btn.querySelectorAll(".mode");
     return {
         finish: function () {
-            code.scrollTop = code.scrollHeight;
+            code.scrollTop = code.scrollHeight;//解决代码显示滚动条问题
             btnModeDom.forEach((item) => {
                 item.disabled = true
             })
